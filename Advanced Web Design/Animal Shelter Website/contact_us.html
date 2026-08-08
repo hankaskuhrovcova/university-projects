@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<!--Team Member 3-->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dublin Paws - Contact Us</title>
+    <link rel="icon" type="image/png" href="images/log_yellow.png" />
+    <script
+      src="https://kit.fontawesome.com/70de9f3425.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="css/contact_us.css" />
+    <link rel="stylesheet" href="css/main.css" />
+    
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        /* POPUP: CALL NOW */
+        const callBtn = document.getElementById("callNowy");
+        const modal = document.getElementById("BanCally");
+        const closeBtn = document.getElementById("closeCally");
+
+        if (callBtn && modal && closeBtn) {
+          callBtn.addEventListener("click", function (e) {
+            e.preventDefault();
+            modal.style.display = "flex";
+          });
+
+          closeBtn.addEventListener("click", function () {
+            modal.style.display = "none";
+          });
+
+          modal.addEventListener("click", function (e) {
+            if (e.target === modal) modal.style.display = "none";
+          });
+
+          document.addEventListener("keydown", function (e) {
+            if (e.key === "Escape" && modal.style.display === "flex") {
+              modal.style.display = "none";
+            }
+          });
+        }
+
+        /* FORM: SUBMIT MESSAGE */
+        const form = document.getElementById("con-formy");
+        const status = document.getElementById("formy-stacie");
+        const checkbox = document.getElementById("termsCheck");
+
+        if (!form || !status) return;
+
+        let hideTimer = null;
+
+        form.addEventListener("submit", function (e) {
+          if (!form.checkValidity()) {
+            e.preventDefault();
+            form.reportValidity();
+            return;
+          }
+
+          e.preventDefault();
+          status.textContent = "Thank you! Your message has been sent.";
+          status.classList.add("show");
+
+          form.reset();
+
+          if (checkbox) checkbox.checked = false;
+
+          if (hideTimer) clearTimeout(hideTimer);
+
+          hideTimer = setTimeout(function () {
+            status.classList.remove("show");
+            status.textContent = "";
+            hideTimer = null;
+          }, 2500);
+        });
+      });
+    </script>
+  </head>
+
+  <body>
+    <header class="nav-wsp">
+      <div class="nav-right-groupy">
+        <nav class="nav-centery">
+          <a href="index.html" class="nav-link"
+            ><i class="fa-solid fa-house" style="margin-bottom: 2px"></i>Home</a
+          >
+          <a href="newsletter.html" class="nav-link"
+            ><i class="fa-regular fa-newspaper"></i>Newsletter</a
+          >
+          <a href="adoptable_pets.html" class="nav-link"
+            ><i class="fa-solid fa-paw"></i>Adoptable Pets</a
+          >
+          <a href="success_stories.html" class="nav-link"
+            ><i class="fa-regular fa-star" style="margin-bottom: 1px"></i
+            >Success stories</a
+          >
+          <a href="#" class="nav-link"
+            ><i class="fa-regular fa-paper-plane"></i>Contact</a
+          >
+
+          <div class="downdown">
+            <a href="#" class="nav-link"
+              ><i class="fa-solid fa-bars"></i>More</a
+            >
+
+            <div class="downdown-menu">
+              <a href="volunteer.html">Volunteer</a>
+              <a href="donate.html">Donate</a>
+              <a href="eventcalendar.html">Events</a>
+              <a href="faq.html">FAQ</a>
+              <a href="lostpets.html">Lost pets</a>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <!--POP UP WINDOW AFTER CLICK THE "CALL NOW" BUTTON-->
+    <div class="ban-cally" id="BanCally">
+      <div class="ban-cally-boxy">
+        <h3><i class="fa-solid fa-phone"></i> Call Us</h3>
+        <p>
+          Please call <strong>0 123 456 789</strong> for immediate assistance.
+        </p>
+        <button id="closeCally" type="button">OK</button>
+      </div>
+    </div>
+
+    <!--BANNER-->
+    <div class="ban-yelly" role="alert">
+      <div class="ban-innery">
+        <div class="ban-icony" aria-hidden="true">
+          <i class="fa-solid fa-paw"></i>
+        </div>
+
+        <div class="ban-texty">
+          <strong>Lost or found an animal ?</strong>
+          <span
+            >Please call us immediately — Click the "Call Now" for urgent
+            cases.</span
+          >
+        </div>
+
+        <a href="#" class="ban-nowy" id="callNowy">Call Now</a>
+      </div>
+    </div>
+
+    <!--TOP TEXT-->
+    <p class="word-toppy">
+      We’d love to hear from you. Whether you’re interested in adoption,
+      volunteering, donations, or have a general question, please get in touch
+      using the form below.
+    </p>
+
+    <!--CONTACT US FORM-->
+    <div class="con-wrappery">
+      <div class="con-boxy">
+        <div class="formy-boxy heading_font_1">
+          <h2 class="heading_font_1">Contact Us</h2>
+
+          <form id="con-formy">
+            <label>Full Name</label>
+            <input type="text" required />
+
+            <label>Email Address</label>
+            <input type="email" required />
+
+            <label>Subject</label>
+            <input type="text" required />
+
+            <label>Message</label>
+            <textarea required></textarea>
+
+            <div class="terms-boxy">
+              <label class="terms-label" for="termsCheck">
+                <input type="checkbox" id="termsCheck" required />
+                <span class="custom-checky" aria-hidden="true"></span>
+                <span class="terms-texty"
+                  >I agree to the Terms &amp; Conditions</span
+                >
+              </label>
+            </div>
+
+            <button type="submit">Send Message</button>
+            <p id="formy-stacie" class="formy-stacie"></p>
+          </form>
+        </div>
+
+        <!--MAP-->
+        <div class="map-boxy">
+          <div class="map-resy">
+            <iframe
+              title="Dublin City University Map"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2383.401971399664!2d-6.268031!3d53.3850306!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48670c2b850b43c3%3A0x43c91bbf17f1eef2!2sDublin%20City%20University!5e0!3m2!1sen!2sie!4v1700000000000"
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            >
+            </iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--BOTTOM TEXT-->
+    <div class="word-bottomy">
+      <p>We aim to respond within <strong>24 hours</strong>.</p>
+      <p>
+        Your information is <strong>never shared</strong> and is kept
+        confidential.
+      </p>
+    </div>
+
+    <footer>
+      <div class="container">
+        <div class="footer-blahblah">
+          <div class="col footer-lefty">
+            <img src="images/log_yellow.png" alt="logo" class="img-fluid" />
+          </div>
+          <div class="footer-col footer-lefty">
+            <h3 class="footer-head">Animal Shelter</h3>
+            <p class="footer-cappy">
+              Dedicated to rescuing, rehabilitating, and rehoming animals in
+              need. Every adoption changes two lives - the pet's and yours.
+            </p>
+          </div>
+
+          <div class="footer-col footer-middley">
+            <h4 class="footer-titley">Discover</h4>
+            <a href="index.html" class="footer-link">Home</a>
+            <a href="newsletter.html" class="footer-link">Newsletter</a>
+            <a href="adoptable_pets.html" class="footer-link">Adoptable Pets</a>
+            <a href="eventcalendar.html" class="footer-link">Event Calendar</a>
+            <a href="volunteer.html" class="footer-link">Volunteer</a>
+            <a href="faq.html" class="footer-link">FAQ</a>
+          </div>
+
+          <div class="footer-col footer-righty">
+            <h4 class="footer-titley">Address</h4>
+            <p class="footer-addressy">
+              <i class="fa-solid fa-location-dot"></i>73 Glasnevin
+            </p>
+            <p class="footer-addressy" style="margin-left: 23px">
+              DCU Glasnevin
+            </p>
+            <p class="footer-addressy" style="margin-left: 23px">Ireland</p>
+            <p class="footer-addressy">
+              <i class="fa-solid fa-location-arrow"></i>info@animalshelter.ie
+            </p>
+            <p class="footer-addressy">
+              <i class="fa-solid fa-phone" style="margin-left: 2px"></i>0 123
+              456 789
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="animal.js"></script>
+  </body>
+</html>
