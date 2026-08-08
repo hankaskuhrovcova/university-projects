@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<!--Team Member 1-->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Event Calendar – Dublin Paws Animal Shelter</title>
+    <link rel="icon" type="image/png" href="images/log_yellow.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+ <!--Bootstrap CSS-->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/calendar.css" />
+
+    <!-- Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Font Awesome (requested) -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    
+  </head>
+
+  <body>
+  <!-- NAV -->
+<header class="nav-wsp">
+    <div class="nav-right-groupy">
+        <nav class="nav-centery">
+            <a href="index.html" class="nav-link"><i class="fa-solid fa-house"></i>Home</a>
+            <a href="newsletter.html" class="nav-link"><i class="fa-regular fa-newspaper"></i>Newsletter</a>
+            <a href="adoptable_pets.html" class="nav-link"><i class="fa-solid fa-paw"></i>Adoptable Pets</a>
+            <a href="success_stories.html" class="nav-link"><i class="fa-regular fa-star"></i>Success stories</a>
+            <a href="contact_us.html" class="nav-link"><i class="fa-regular fa-paper-plane"></i>Contact</a>
+
+            <div class="downdown">
+                <a href="#" class="nav-link"><i class="fa-solid fa-bars"></i>More</a>
+                <div class="downdown-menu">
+                    <a href="volunteer.html">Volunteer</a>
+                    <a href="donate.html">Donate</a>
+                    <a href="eventcalendar.html">Events</a>
+                    <a href="faq.html">FAQ</a>
+                    <a href="lostpets.html">Lost pets</a>
+                </div>
+            </div>
+        </nav>
+    </div>
+</header>
+
+    <!-- MAIN -->
+    <main class="cal-wrap">
+      <header class="cal-hero">
+        <h1 class="heading_font_1">Event Calendar</h1>
+        <p>
+          Browse upcoming shelter events. Click a date to expand it, and add
+          events to your phone calendar.
+        </p>
+      </header>
+
+      <!-- Controls -->
+      <section class="cal-toolbar">
+        <div class="cal-nav">
+          <button id="prevMonth" type="button">◀</button>
+          <button id="todayBtn" type="button">Today</button>
+          <button id="nextMonth" type="button">▶</button>
+        </div>
+        <div id="monthYear" class="cal-title" aria-live="polite"></div>
+      </section>
+
+      <!-- Calendar -->
+      <section class="cal-grid">
+        <div class="cal-dow">
+          <div>Mon</div><div>Tue</div><div>Wed</div>
+          <div>Thu</div><div>Fri</div><div>Sat</div><div>Sun</div>
+        </div>
+        <div id="calendar" class="cal-days"></div>
+      </section>
+
+      <p class="cal-note">
+        Tip: Click a date to expand it. Use <strong>Add</strong> to save events
+        to your phone calendar.
+      </p>
+
+      <!-- Photo Carousel -->
+      <section class="past-events">
+        <h2 class="heading_font_1">Photos from Past Events</h2>
+        <p class="past-events-sub">
+          A few highlights from our adoption days, fundraisers, and volunteer
+          sessions.
+        </p>
+
+        <div class="carousel" aria-label="Past events photo carousel">
+          <input type="radio" name="slides" id="slide1" checked />
+          <input type="radio" name="slides" id="slide2" />
+          <input type="radio" name="slides" id="slide3" />
+          <input type="radio" name="slides" id="slide4" />
+
+          <div class="slides">
+            <figure class="slide">
+              <img src="images/2.jpg" alt="Adoption Day" />
+              <figcaption>Adoption Day – Meeting pets and families</figcaption>
+            </figure>
+
+            <figure class="slide">
+              <img src="images/1.jpg" alt="Volunteer Training" />
+              <figcaption>Volunteer Training – Safe handling</figcaption>
+            </figure>
+
+            <figure class="slide">
+              <img src="images/4.jpg" alt="Fundraiser Bake Sale" />
+              <figcaption>Fundraiser Bake Sale – Supporting vet care</figcaption>
+            </figure>
+
+            <figure class="slide">
+              <img src="images/3.jpg" alt="Community Walk" />
+              <figcaption>Community Dog Walk – Phoenix Park</figcaption>
+            </figure>
+          </div>
+
+          <div class="dots">
+            <label for="slide1" class="dot" aria-label="Slide 1"></label>
+            <label for="slide2" class="dot" aria-label="Slide 2"></label>
+            <label for="slide3" class="dot" aria-label="Slide 3"></label>
+            <label for="slide4" class="dot" aria-label="Slide 4"></label>
+          </div>
+        </div>
+      </section>
+    </main>
+<!-- Footer -->
+    <footer>
+      <div class="container">
+        <div class="footer-blahblah">
+          <div class="col footer-lefty">
+            <img src="images/log_yellow.png" alt="logo" class="img-fluid" />
+          </div>
+          <div class="footer-col footer-lefty">
+            <h3 class="footer-head">Animal Shelter</h3>
+            <p class="footer-cappy">
+              Dedicated to rescuing, rehabilitating, and rehoming animals in
+              need. Every adoption changes two lives - the pet's and yours.
+            </p>
+          </div>
+
+          <div class="footer-col footer-middley">
+            <h4 class="footer-titley">Discover</h4>
+            <a href="index.html" class="footer-link">Home</a>
+            <a href="newsletter.html" class="footer-link">Newsletter</a>
+            <a href="adoptable_pets.html" class="footer-link">Adoptable Pets</a>
+            <a href="eventcalendar.html" class="footer-link">Event Calendar</a>
+            <a href="volunteer.html" class="footer-link">Volunteer</a>
+            <a href="faq.html" class="footer-link">FAQ</a>
+          </div>
+
+          <div class="footer-col footer-righty">
+            <h4 class="footer-titley">Address</h4>
+            <p class="footer-addressy">
+              <i class="fa-solid fa-location-dot"></i>73 Glasnevin
+            </p>
+            <p class="footer-addressy" style="margin-left: 23px">
+              DCU Glasnevin
+            </p>
+            <p class="footer-addressy" style="margin-left: 23px">Ireland</p>
+            <p class="footer-addressy">
+              <i class="fa-solid fa-location-arrow"></i>info@animalshelter.ie
+            </p>
+            <p class="footer-addressy">
+              <i class="fa-solid fa-phone" style="margin-left: 2px"></i>0 123
+              456 789
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+
+    <!-- JS files -->
+    <script src="animal.js"></script>
+
+    <!-- Calendar + Carousel JS  -->
+    <script>
+      // -------- Calendar Logic --------
+      let currentDate = new Date();
+      const calendar = document.getElementById("calendar");
+      const monthYear = document.getElementById("monthYear");
+
+      document.getElementById("prevMonth").onclick = () => {
+        currentDate.setMonth(currentDate.getMonth() - 1);
+        renderCalendar();
+      };
+      document.getElementById("nextMonth").onclick = () => {
+        currentDate.setMonth(currentDate.getMonth() + 1);
+        renderCalendar();
+      };
+      document.getElementById("todayBtn").onclick = () => {
+        currentDate = new Date();
+        renderCalendar();
+      };
+
+      function mondayFirstIndex(d) {
+        return (d + 6) % 7;
+      }
+      function daysInMonth(y, m) {
+        return new Date(y, m + 1, 0).getDate();
+      }
+      function upcomingDateKey(month, day) {
+        const now = new Date();
+        let year = now.getFullYear();
+        if (now > new Date(year, month - 1, day)) year++;
+        return `${year}-${month}-${day}`;
+      }
+
+      // Official events
+      const events = [
+        { date: upcomingDateKey(12, 14), title: "Adoption Day", time: "12:00" },
+        {
+          date: upcomingDateKey(12, 20),
+          title: "Community Dog Walk",
+          time: "10:30",
+        },
+        {
+          date: upcomingDateKey(12, 27),
+          title: "Volunteer Training",
+          time: "11:00",
+        },
+      ];
+
+      // Click to expand a day cell
+      function toggleDay(el) {
+        document.querySelectorAll(".day.expanded").forEach((d) => {
+          if (d !== el) d.classList.remove("expanded");
+        });
+        el.classList.toggle("expanded");
+      }
+      window.toggleDay = toggleDay;
+
+      // Download simple ICS
+      function downloadICS(ev) {
+        const d = ev.date.split("-");
+        const start = `${d[0]}${String(d[1]).padStart(2, "0")}${String(
+          d[2]
+        ).padStart(2, "0")}T${ev.time.replace(":", "")}00`;
+
+        const ics = `BEGIN:VCALENDAR
+VERSION:2.0
+BEGIN:VEVENT
+DTSTART:${start}
+SUMMARY:${ev.title}
+END:VEVENT
+END:VCALENDAR`;
+
+        const blob = new Blob([ics], { type: "text/calendar" });
+        const a = document.createElement("a");
+        a.href = URL.createObjectURL(blob);
+        a.download = ev.title.replace(/\s+/g, "_") + ".ics";
+        a.click();
+      }
+      window.downloadICS = downloadICS;
+
+      function renderCalendar() {
+        calendar.innerHTML = "";
+        const y = currentDate.getFullYear();
+        const m = currentDate.getMonth();
+
+        monthYear.textContent = currentDate.toLocaleDateString("en-IE", {
+          month: "long",
+          year: "numeric",
+        });
+
+        const start = mondayFirstIndex(new Date(y, m, 1).getDay());
+        const total = daysInMonth(y, m);
+
+        for (let i = 0; i < start; i++) {
+          calendar.innerHTML += `<div class="day empty"></div>`;
+        }
+
+        for (let day = 1; day <= total; day++) {
+          const key = `${y}-${m + 1}-${day}`;
+          const dayEvents = events.filter((e) => e.date === key);
+
+          let html = "";
+          dayEvents.forEach((e) => {
+            const safe = JSON.stringify(e).replace(/"/g, "&quot;");
+            html += `
+              <div class="event event-row">
+                <span class="event-title">${e.title} • ${e.time}</span>
+                <button class="event-btn" type="button"
+                  onclick="event.stopPropagation(); downloadICS(${safe});">
+                  Add
+                </button>
+              </div>
+            `;
+          });
+
+          calendar.innerHTML += `
+            <div class="day read-only" onclick="toggleDay(this)">
+              <strong>${day}</strong>
+              ${html}
+            </div>
+          `;
+        }
+      }
+
+      renderCalendar();
+
+      // -------- Carousel Auto-Rotate (6 seconds) --------
+      const slides = [
+        document.getElementById("slide1"),
+        document.getElementById("slide2"),
+        document.getElementById("slide3"),
+        document.getElementById("slide4"),
+      ];
+
+      let currentSlide = 0;
+      setInterval(() => {
+        slides[currentSlide].checked = false;
+        currentSlide = (currentSlide + 1) % slides.length;
+        slides[currentSlide].checked = true;
+      }, 6000);
+    </script>
+  </body>
+</html>
