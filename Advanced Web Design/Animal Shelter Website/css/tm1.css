@@ -1,0 +1,115 @@
+/* =========================================
+   FAQ PAGE STYLES
+   Uses colors from main.css variables
+========================================= */
+@import url("main.css");
+
+body {
+    background-color: var(--light-grey);
+    margin: 0;
+    padding: 0;
+}
+
+/* =========================================
+   FAQ HERO (RED OVERLAY – SAME EFFECT)
+========================================= */
+
+.faq-hero {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    min-height: 320px;
+    padding: 40px 20px;
+
+    text-align: center;
+    color: var(--off-white);
+
+    background-image: url("../images/14.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* 🔴 RED OVERLAY */
+.faq-hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: rgba(110, 13, 0, 0.85); /* #6e0d00 */
+    z-index: 1;
+}
+
+/* TEXT ABOVE OVERLAY */
+.faq-hero h1,
+.faq-hero p {
+    position: relative;
+    z-index: 2;
+    transform: translateY(20px);
+}
+
+.faq-hero h1 {
+    font-size: 3.2rem;
+    margin-bottom: 20px;
+}
+
+.faq-hero p {
+    max-width: 800px;
+    font-size: 18px;
+    line-height: 1.7;
+}
+
+/* =========================================
+   FAQ SECTIONS
+========================================= */
+
+.faq-section {
+    max-width: 1050px;
+    margin: 50px auto;
+    padding: 35px 40px;
+    background-color: var(--off-white);
+    border-radius: 16px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+}
+
+.faq-section h2 {
+    color: var(--dark-red);
+    margin-bottom: 30px;
+    border-bottom: 3px solid var(--yellow);
+    padding-bottom: 12px;
+}
+
+.faq-item {
+    margin-bottom: 28px;
+}
+
+.faq-item h3 {
+    color: var(--off-black);
+    margin-bottom: 10px;
+}
+
+.faq-item p {
+    color: var(--off-black);
+    line-height: 1.8;
+}
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 768px) {
+    .faq-hero {
+        min-height: 260px;
+    }
+
+    .faq-hero h1 {
+        font-size: 32px;
+    }
+
+    .faq-section {
+        max-width: 95%;
+        padding: 30px 25px;
+    }
+}
