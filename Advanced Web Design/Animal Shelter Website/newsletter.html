@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<!--Team Member 2-->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Newsletter & Sign In – Dublin Paws Animal Shelter</title>
+    <link rel="icon" type="image/png" href="images/log_yellow.png" />
+    <!--page css-->
+    <!--The css later in the code will overload the css above it.
+            In this case, the main css will win over the page css.-->
+    <!--Bootstrap CSS-->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!--Font Awesome-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+
+    <!--main css-->
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/newsletter.css" />
+  </head>
+  <body>
+    <header class="nav-wsp">
+      <div class="nav-right-groupy">
+        <nav class="nav-centery">
+          <a href="index.html" class="nav-link"
+            ><i class="fa-solid fa-house" style="margin-bottom: 2px"></i>Home</a
+          >
+          <a href="newsletter.html" class="nav-link"
+            ><i class="fa-regular fa-newspaper"></i>Newsletter</a
+          >
+          <a href="adoptable_pets.html" class="nav-link"
+            ><i class="fa-solid fa-paw"></i>Adoptable Pets</a
+          >
+          <a href="success_stories.html" class="nav-link"
+            ><i class="fa-regular fa-star" style="margin-bottom: 1px"></i
+            >Success stories</a
+          >
+          <a href="contact_us.html" class="nav-link"
+            ><i class="fa-regular fa-paper-plane"></i>Contact</a
+          >
+
+          <div class="downdown">
+            <a href="#" class="nav-link"
+              ><i class="fa-solid fa-bars"></i>More</a
+            >
+
+            <div class="downdown-menu">
+              <a href="volunteer.html">Volunteer</a>
+              <a href="donate.html">Donate</a>
+              <a href="eventcalendar.html">Events</a>
+              <a href="faq.html">FAQ</a>
+              <a href="lost_pets.html">Lost pets</a>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <div class="container-fluid">
+      <div class="row justify-content-center">
+        <div class="col-lg-6 col-md-8 col-sm-12" id="newsletter">
+          <h2 class="heading_font_1">
+            <!-- Added the heading class-->
+            <i class="fa-solid fa-envelope-open-text"></i> Sign up to our
+            Newsletter
+          </h2>
+          <p class="text-center mb-4" style="color: #666">
+            Get weekly updates on adoptable pets, events, and heartwarming
+            stories!
+          </p>
+
+          <form id="newsletterForm">
+            <div class="mb-3">
+              <label for="emailInput" class="form-label heading_font_1">
+                <i class="fa-solid fa-envelope"></i> Email Address
+                <!-- Added the heading class-->
+              </label>
+              <input
+                type="email"
+                class="form-control"
+                id="emailInput"
+                placeholder="Enter your email (e.g., example@email.com)"
+                required
+              />
+              <div id="emailError" class="text-danger mt-2 d-none">
+                <i class="fa-solid fa-circle-exclamation"></i> Please enter a
+                valid email address
+              </div>
+            </div>
+            <button type="submit" class="BUTTON heading_font_1">
+              <i class="fa-solid fa-paper-plane"></i> Subscribe
+              <!-- Added the heading class-->
+            </button>
+            <div id="successMessage" class="alert successMessage mt-3 d-none">
+              <i class="fa-solid fa-check-circle"></i> You have successfully
+              subscribed to our Newsletter!
+            </div>
+          </form>
+
+          <div class="newsletter-features">
+            <div class="feature-item">
+              <i class="fa-solid fa-heart"></i>
+              <h4 class="heading_font_1">Pet Updates</h4>
+              <!-- Added the heading class-->
+              <p>Weekly adoptable pets</p>
+            </div>
+            <div class="feature-item">
+              <i class="fa-solid fa-calendar-days"></i>
+              <h4 class="heading_font_1">Events</h4>
+              <!-- Added the heading class-->
+              <p>Upcoming activities</p>
+            </div>
+            <div class="feature-item">
+              <i class="fa-solid fa-star"></i>
+              <h4 class="heading_font_1">Success Stories</h4>
+              <!-- Added the heading class-->
+              <p>Happy adoption tales</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer>
+      <div class="container">
+        <div class="footer-blahblah">
+          <div class="col footer-lefty">
+            <img src="images/log_yellow.png" alt="logo" class="img-fluid" />
+          </div>
+          <div class="footer-col footer-lefty">
+            <h3 class="footer-head">Animal Shelter</h3>
+            <p class="footer-cappy">
+              Dedicated to rescuing, rehabilitating, and rehoming animals in
+              need. Every adoption changes two lives - the pet's and yours.
+            </p>
+          </div>
+
+          <div class="footer-col footer-middley">
+            <h4 class="footer-titley">Discover</h4>
+            <a href="index.html" class="footer-link">Home</a>
+            <a href="newsletter.html" class="footer-link">Newsletter</a>
+            <a href="adoptable_pets.html" class="footer-link">Adoptable Pets</a>
+            <a href="eventcalendar.html" class="footer-link">Event Calendar</a>
+            <a href="volunteer.html" class="footer-link">Volunteer</a>
+            <a href="faq.html" class="footer-link">FAQ</a>
+          </div>
+
+          <div class="footer-col footer-righty">
+            <h4 class="footer-titley">Address</h4>
+            <p class="footer-addressy">
+              <i class="fa-solid fa-location-dot"></i>123 Example Street
+            </p>
+            <p class="footer-addressy" style="margin-left: 23px">
+              DCU Glasnevin
+            </p>
+            <p class="footer-addressy" style="margin-left: 23px">Ireland</p>
+            <p class="footer-addressy">
+              <i class="fa-solid fa-location-arrow"></i>info@animalshelter.ie
+            </p>
+            <p class="footer-addressy">
+              <i class="fa-solid fa-phone" style="margin-left: 2px"></i>0 123
+              456 789
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script>
+      document
+        .getElementById("newsletterForm")
+        .addEventListener("submit", function (event) {
+          event.preventDefault(); // Prevent form from actually submitting
+
+          let email = document.getElementById("emailInput").value;
+          let emailError = document.getElementById("emailError");
+          let successMessage = document.getElementById("successMessage");
+
+          // Email validation - check for @ and . after @
+          if (email.includes("@") && email.indexOf(".") > email.indexOf("@")) {
+            // Hide error if it was showing
+            emailError.classList.add("d-none");
+
+            // Show success message
+            successMessage.classList.remove("d-none");
+
+            // Clear the input field
+            document.getElementById("emailInput").value = "";
+
+            // Hide success message after 5 seconds
+            setTimeout(function () {
+              successMessage.classList.add("d-none");
+            }, 5000);
+
+            console.log("Newsletter subscription successful for:", email);
+          } else {
+            // Show error message
+            emailError.classList.remove("d-none");
+            successMessage.classList.add("d-none");
+            console.log("Invalid email address");
+          }
+        });
+
+      // Real-time validation feedback
+      document
+        .getElementById("emailInput")
+        .addEventListener("input", function () {
+          let emailError = document.getElementById("emailError");
+          let email = this.value;
+
+          if (
+            email.length > 0 &&
+            (!email.includes("@") || email.indexOf(".") <= email.indexOf("@"))
+          ) {
+            emailError.classList.remove("d-none");
+          } else {
+            emailError.classList.add("d-none");
+          }
+        });
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="animal.js"></script>
+  </body>
+</html>
