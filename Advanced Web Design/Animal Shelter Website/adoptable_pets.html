@@ -1,0 +1,1058 @@
+<!DOCTYPE html>
+<!--HANA-->
+
+<!--DESIGN INSPIRATION https://www.dogstrust.ie/rehoming/dogs?page=0&sort=NEW&county=All%20Counties&liveWithCats=false&liveWithDogs=false&liveWithPreschool=false&liveWithPrimary=false&liveWithSecondary=false&noReserved=false&isUnderdog=false&currentDistance=1000 Accessed 13.12.2025-->
+<!--PICTURES SOURCED FROM https://www.vecteezy.com/free-photos Accessed 13.12.2025-->
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Adoptable Pets - Dublin Paws Animal Shelter</title>
+        <link rel="icon" type="image/png" href="images/log_yellow.png">
+        <script src="https://kit.fontawesome.com/70de9f3425.js" crossorigin="anonymous"></script>
+        <script src="https://cdn.tailwindcss.com"></script>
+
+        <!--Bootstrap CSS-->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"/>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+
+        <!--CSS links-->
+        <link rel="stylesheet" href="css/hana_style.css"> 
+        <link rel="stylesheet" href="css/main.css">
+
+
+        <!--font links-->
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
+
+    </head>
+    <body class="pt-0 bg-[var(--off-white)]">
+
+    <!--nav bar-->
+    <header class="nav-wsp">
+        <div class="nav-right-groupy">
+            <nav class="nav-centery">
+                <a href="index.html" class="nav-link">
+                    <i class="fa-solid fa-house" style="margin-bottom: 2px"></i>Home</a>
+                <a href="newsletter.html" class="nav-link">
+                    <i class="fa-regular fa-newspaper"></i>Newsletter</a>
+                <a href="adoptable_pets.html" class="nav-link">
+                    <i class="fa-solid fa-paw"></i>Adoptable Pets</a>
+                <a href="success_stories.html" class="nav-link">
+                    <i class="fa-regular fa-star" style="margin-bottom: 1px"></i>Success stories</a>
+                <a href="contact_us.html" class="nav-link">
+                    <i class="fa-regular fa-paper-plane"></i>Contact</a>
+
+                <div class="downdown">
+                    <a href="#" class="nav-link">
+                        <i class="fa-solid fa-bars"></i>More</a>
+
+                    <div class="downdown-menu">
+                        <a href="volunteer.html">Volunteer</a>
+                        <a href="donate.html">Donate</a>
+                        <a href="eventcalendar.html">Events</a>
+                        <a href="faq.html">FAQ</a>
+                        <a href="lostpets.html">Lost pets</a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+        
+        <section class="intraductory_section_adoptable_pets
+                        content-around
+                        pt-[140px]
+                        pb-[70px]
+                        bg-[var(--yellow)]
+                        text-center">
+                <!--Introductory section-->
+                    <img src="images/adoptable_pets/small_exotic1.jpg" 
+                        alt="Nefertiti, Red Eye Tree Frog" 
+                        class="overlay-full">                
+                <div class="flex items-center justify-center gap-6">
+                    <h2 class="heading_font_1 text-6xl text-[var(--off-black)] relative z-10">Give a home</h2>
+                    <i class="fa-solid fa-house text-5xl text-[var(--off-black)] relative z-10"></i>
+                </div>
+                <p class="relative z-10 text-[var(--off-black)]">
+                    <span id="animalCount" class="font-bold">0</span> animals for adoption
+                </p>
+
+        </section>
+        <div class="adoptable_pets_container
+                        flex
+                        flex-col
+                        relative
+                        w-full
+                        box-border
+                        pt-5
+                        pb-8">
+            <div class="adoptable_pets_dropdown">
+                <input type="checkbox" id="filter-toggle" hidden>
+                <label for="filter-toggle" id="adoptable_pets_filter_button">Filter</label>
+                <div class="adoptable_pets_filter">
+                        <!--filter & sort section-->
+                        <div class="adoptable_pets_filter_feature">
+                            <div> <!--CATEGORY-->
+                                <div class="adoptable_pets_filter_buttons">
+                                    <button data-filter="category" data-value="all" onclick="setFilter('category','all')" aria-label="All Animal Categories Filter Selector">All Animals</button>
+                                    <button data-filter="category" data-value="dog" onclick="setFilter('category','dog')" aria-label="Dog Category Filter Selector">Dogs</button>
+                                    <button data-filter="category" data-value="cat" onclick="setFilter('category','cat')" aria-label="Cat Category Filter Selector">Cats</button>
+                                    <button data-filter="category" data-value="bird" onclick="setFilter('category','bird')" aria-label="Bird Category Filter Selector">Birds</button>
+                                    <button data-filter="category" data-value="farm" onclick="setFilter('category','farm')" aria-label="Farm Category Filter Selector">Farm</button>
+                                    <button data-filter="category" data-value="exotic" onclick="setFilter('category','exotic')" aria-label="Exotic Category Filter Selector">Exotic</button>
+                                </div>
+                            </div>
+                            <div> <!--GENDER-->
+                                <div class="adoptable_pets_filter_buttons">
+                                    <button data-filter="gender" data-value="all" onclick="setFilter('gender','all')" aria-label="Any Gender Filter Selector">Any Gender</button>
+                                    <button data-filter="gender" data-value="male" onclick="setFilter('gender','male')" aria-label="Male Gender Filter Selector">Male</button>
+                                    <button data-filter="gender" data-value="female" onclick="setFilter('gender','female')" aria-label="Female Gender Filter Selector">Female</button>
+                                </div>
+                            </div>
+                            <div> <!--SIZE-->
+                                <div class="adoptable_pets_filter_buttons">
+                                    <button data-filter="size" data-value="all" onclick="setFilter('size','all')" aria-label="Any Size Category Filter Selector">Any Size</button>
+                                    <button data-filter="size" data-value="small" onclick="setFilter('size','small')" aria-label="Small Size Category Filter Selector">Small</button>
+                                    <button data-filter="size" data-value="medium" onclick="setFilter('size','medium')" aria-label="Medium Size Category Filter Selector">Medium</button>
+                                    <button data-filter="size" data-value="large" onclick="setFilter('size','large')" aria-label="Large Size Category Filter Selector">Large</button>
+
+                                </div>
+                            </div>
+                            <div> <!--AGE-->
+                                <div class="adoptable_pets_filter_buttons">
+                                    <button data-filter="age" data-value="all" onclick="setFilter('age','all')" aria-label="All Ages Category Filter Selector">Any Age</button>
+                                    <button data-filter="age" data-value="under_6_month" onclick="setFilter('age','under_6_month')" aria-label="Under 6 Months Age Category Filter Selector">Under 6 months</button>
+                                    <button data-filter="age" data-value="6_to_12_months" onclick="setFilter('age','6_to_12_months')" aria-label="6 to 12 Months Age Category Filter Selector">6 to 12 months</button>
+                                    <button data-filter="age" data-value="1_to_2_years" onclick="setFilter('age','1_to_2_years')" aria-label="1 to 2 Years Age Category Filter Selector">1 to 2 years</button>
+                                    <button data-filter="age" data-value="3_to_5_years" onclick="setFilter('age','3_to_5_years')" aria-label="3 to 5 Years Age Category Filter Selector">3 to 5 years</button>
+                                    <button data-filter="age" data-value="6_to_7_years" onclick="setFilter('age','6_to_7_years')" aria-label="6 to 7 Years Age Category Filter Selector">6 to 7 years</button>
+                                    <button data-filter="age" data-value="8+_years" onclick="setFilter('age','8+_years')" aria-label="8 plus Years Age Category Filter Selector">8+ years</button>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="adoptable_pets_filter_buttons">
+                                    <button onclick="setViewMode('all')" aria-label="All Pets Filter Selector">All Pets</button>
+                                    <button onclick="setViewMode('favourites')" aria-label="Favourited Pets Filter Selector">Favourites</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="animal_listing
+                            w-[80%] mx-auto
+                            grid 
+                            grid-cols-1 
+                            md:grid-cols-2 
+                            lg:grid-cols-3
+                            gap-6
+                            text-[var(--off-black)]
+                            mt-5">
+
+
+                <!--animals to view section-->
+                <div class="animal_listing_container_no_idea_what_for 
+                                bg-[var(--light-grey)]
+                                w-full
+                                md:basis-1/2 
+                                md:max-w-[50%] 
+                                lg:basis-1/3 
+                                lg:max-w-[33.333%] 
+                                box-border
+                                rounded-xl" 
+                        data-liked="false"
+                        data-category="dog"
+                        data-gender="female"
+                        data-size="small"
+                        data-age="3_to_5_years"> <!--animal listing section-->
+
+                    <div class="animal_listing_container relative"> <!--animal container - after finishing copy and paste as many times as needed-->
+                        <button class="adoptable_pets_like_button 
+                                        absolute
+                                        top-2
+                                        right-2" type="button" aria-label="Like button"> <!--like button-->
+                            <i class="fa-solid fa-heart 
+                                    bg-[var(--off-white)]
+                                    p-2
+                                    m-0.5
+                                    rounded-3xl
+                                    text-l"></i>
+                        </button>
+                        <div class="animal_listing_container_body"> <!--main body of the container-->
+                            <div class="animal_listing_container_image 
+                                        aspect-[4/3] 
+                                        w-full 
+                                        overflow-hidden
+                                        rounded-t-xl"> <!--this is the picture of the animal-->
+                                <img class="w-full h-full object-cover"
+                                    src="images/adoptable_pets/small_dog1.jpg" 
+                                    alt="small female Dachshund">
+                            </div>
+                            <div class="animal_listing_container_info py-3 mx-5">
+                                <div class="flex justify-between items-center">
+                                    <div>
+                                        <p class="heading_font_1 text-xl">Robin</p>
+                                        <p>Dachshund</p>
+                                    </div>
+                                    <button class="adopt-btn" 
+                                            onclick="openForm('Robin','Dachshund')" 
+                                            aria-label="Adopt Robin the Dachshund">
+                                        Request
+                                    </button>
+                                </div>
+                                <div class="animal_listing_container_info_other">
+                                    <p>Female | Small | 3 to 5 years</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!--animals to view section-->
+                <div class="animal_listing_container_no_idea_what_for 
+                                bg-[var(--light-grey)]
+                                w-full
+                                md:basis-1/2 
+                                md:max-w-[50%] 
+                                lg:basis-1/3 
+                                lg:max-w-[33.333%] 
+                                box-border
+                                rounded-xl" 
+                    data-liked="false"
+                    data-category="cat"
+                    data-gender="male"
+                    data-size="small"
+                    data-age="6_to_12_months"> <!--animal listing section-->
+
+                    <div class="animal_listing_container relative"> <!--animal container - after finishing copy and paste as many times as needed-->
+                        <button class="adoptable_pets_like_button 
+                                        absolute
+                                        top-2
+                                        right-2" type="button" aria-label="Like button"> <!--like button-->
+                            <i class="fa-solid fa-heart 
+                                    bg-[var(--off-white)]
+                                    p-2
+                                    m-0.5
+                                    rounded-3xl
+                                    text-l"></i>
+                        </button>
+                        <div class="animal_listing_container_body"> <!--main body of the container-->
+                            <div class="animal_listing_container_image 
+                                        aspect-[4/3] 
+                                        w-full 
+                                        overflow-hidden
+                                        rounded-t-xl"> <!--this is the picture of the animal-->
+                                <img class="w-full h-full object-cover"
+                                     src="images/adoptable_pets/small_cat1.jpg" 
+                                     alt="Small male silver tabby cat">
+                            </div>
+                            <div class="animal_listing_container_info py-3 mx-5">
+                                <div class="flex justify-between items-center">
+                                    <div>
+                                        <p class="heading_font_1 text-xl">Cookie</p>
+                                        <p>Silver Tabby</p>
+                                    </div>
+                                        <button class="adopt-btn" 
+                                                onclick="openForm('Cookie','Silver Tabby')" 
+                                                aria-label="Adopt Robin the Dachshund">
+                                            Request
+                                        </button>
+                                </div>
+                                <div class="animal_listing_container_info_other">
+                                    <p>Male | Small | 6 to 12 months</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!--animals to view section-->
+                <div class="animal_listing_container_no_idea_what_for 
+                                bg-[var(--light-grey)]
+                                w-full
+                                md:basis-1/2 
+                                md:max-w-[50%] 
+                                lg:basis-1/3 
+                                lg:max-w-[33.333%] 
+                                box-border
+                                rounded-xl" 
+                    data-liked="false"
+                    data-category="dog"
+                    data-gender="female"
+                    data-size="large"
+                    data-age="3_to_5_years"> <!--animal listing section-->
+
+                    <div class="animal_listing_container relative"> <!--animal container - after finishing copy and paste as many times as needed-->
+                        <button class="adoptable_pets_like_button 
+                                        absolute
+                                        top-2
+                                        right-2" type="button" aria-label="Like button"> <!--like button-->
+                            <i class="fa-solid fa-heart 
+                                    bg-[var(--off-white)]
+                                    p-2
+                                    m-0.5
+                                    rounded-3xl
+                                    text-l"></i>
+                        </button>
+                        <div class="animal_listing_container_body"> <!--main body of the container-->
+                            <div class="animal_listing_container_image 
+                                        aspect-[4/3] 
+                                        w-full 
+                                        overflow-hidden
+                                        rounded-t-xl"> <!--this is the picture of the animal-->
+                                <img class="w-full h-full object-cover"
+                                    src="images/adoptable_pets/large_dog1.jpg" 
+                                    alt="large german shepherd female dog">
+                            </div>
+                            <div class="animal_listing_container_info py-3 mx-5">
+                                <div class="flex justify-between items-center">
+                                    <div>
+                                        <p class="heading_font_1 text-xl">Layla</p>
+                                        <p>German Shepherd</p>
+                                    </div>
+                                        <button class="adopt-btn" 
+                                                onclick="openForm('Layla','German Shepherd')" 
+                                                aria-label="Adopt Layla the German Shepherd">
+                                            Request
+                                        </button>
+                                </div>
+                                <div class="animal_listing_container_info_other">
+                                    <p>Female | Large | 3 to 5 years</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="animal_listing_container_no_idea_what_for 
+                                bg-[var(--light-grey)]
+                                w-full
+                                md:basis-1/2 
+                                md:max-w-[50%] 
+                                lg:basis-1/3 
+                                lg:max-w-[33.333%] 
+                                box-border
+                                rounded-xl" 
+                    data-liked="false"
+                    data-category="farm"
+                    data-gender="male"
+                    data-size="small"
+                    data-age="1_to_2_years"> <!--animal listing section-->
+
+                    <div class="animal_listing_container relative"> <!--animal container - after finishing copy and paste as many times as needed-->
+                        <button class="adoptable_pets_like_button 
+                                        absolute
+                                        top-2
+                                        right-2" type="button" aria-label="Like button"> <!--like button-->
+                            <i class="fa-solid fa-heart 
+                                    bg-[var(--off-white)]
+                                    p-2
+                                    m-0.5
+                                    rounded-3xl
+                                    text-l"></i>
+                        </button>
+                        <div class="animal_listing_container_body"> <!--main body of the container-->
+                            <div class="animal_listing_container_image 
+                                        aspect-[4/3] 
+                                        w-full 
+                                        overflow-hidden
+                                        rounded-t-xl"> <!--this is the picture of the animal-->
+                                <img class="w-full h-full object-cover"
+                                    src="images/adoptable_pets/small_farm1.jpg" 
+                                    alt="small male holland lop bunny">
+                            </div>
+                            <div class="animal_listing_container_info py-3 mx-5">
+                                <div class="flex justify-between items-center">
+                                    <div>
+                                        <p class="heading_font_1 text-xl">Erik</p>
+                                        <p>Holland Lop Bunny</p>
+                                    </div>
+                                        <button class="adopt-btn" 
+                                                onclick="openForm('Erik','Holland Lop Bunny')" 
+                                                aria-label="Adopt Erik the Holland Lop Bunny">
+                                            Request
+                                        </button>
+                                </div>
+                                <div class="animal_listing_container_info_other">
+                                    <p>Male | Small | 1 to 2 years</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!--animals to view section-->
+                <div class="animal_listing_container_no_idea_what_for 
+                                bg-[var(--light-grey)]
+                                w-full
+                                md:basis-1/2 
+                                md:max-w-[50%] 
+                                lg:basis-1/3 
+                                lg:max-w-[33.333%] 
+                                box-border
+                                rounded-xl" 
+                    data-liked="liked"
+                    data-category="bird"
+                    data-gender="male"
+                    data-size="small"
+                    data-age="6_to_12_months"> <!--animal listing section-->
+
+                    <div class="animal_listing_container relative"> <!--animal container - after finishing copy and paste as many times as needed-->
+                        <button class="adoptable_pets_like_button 
+                                        absolute
+                                        top-2
+                                        right-2" type="button" aria-label="Like button"> <!--like button-->
+                            <i class="fa-solid fa-heart 
+                                    bg-[var(--off-white)]
+                                    p-2
+                                    m-0.5
+                                    rounded-3xl
+                                    text-l"></i>
+                        </button>
+                        <div class="animal_listing_container_body"> <!--main body of the container-->
+                            <div class="animal_listing_container_image 
+                                        aspect-[4/3] 
+                                        w-full 
+                                        overflow-hidden
+                                        rounded-t-xl"> <!--this is the picture of the animal-->
+                                <img class="w-full h-full object-cover" 
+                                    src="images/adoptable_pets/small_bird1.jpg" 
+                                    alt="Green male Budgerigar">
+                            </div>
+                            <div class="animal_listing_container_info py-3 mx-5">
+                                <div class="flex justify-between items-center">
+                                    <div>
+                                        <p class="heading_font_1 text-xl">Till</p>
+                                        <p>Budgerigar</p>
+                                    </div>
+                                        <button class="adopt-btn" 
+                                                onclick="openForm('Till','Budgerigar')" 
+                                                aria-label="Adopt Till the Budgerigar">
+                                            Request
+                                        </button>
+                                </div>
+                                <div class="animal_listing_container_info_other">
+                                    <p>Male | Small | 6 to 12 months</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!--animals to view section-->
+                <div class="animal_listing_container_no_idea_what_for 
+                                bg-[var(--light-grey)]
+                                w-full
+                                md:basis-1/2 
+                                md:max-w-[50%] 
+                                lg:basis-1/3 
+                                lg:max-w-[33.333%] 
+                                box-border
+                                rounded-xl" 
+                    data-liked="liked"
+                    data-category="dog"
+                    data-gender="male"
+                    data-size="large"
+                    data-age="1_to_2_years"> <!--animal listing section-->
+
+                    <div class="animal_listing_container relative"> <!--animal container - after finishing copy and paste as many times as needed-->
+                        <button class="adoptable_pets_like_button 
+                                        absolute
+                                        top-2
+                                        right-2" type="button" aria-label="Like button"> <!--like button-->
+                            <i class="fa-solid fa-heart 
+                                    bg-[var(--off-white)]
+                                    p-2
+                                    m-0.5
+                                    rounded-3xl
+                                    text-l"></i>
+                        </button>
+                        <div class="animal_listing_container_body"> <!--main body of the container-->
+                            <div class="animal_listing_container_image 
+                                        aspect-[4/3] 
+                                        w-full 
+                                        overflow-hidden
+                                        rounded-t-xl"> <!--this is the picture of the animal-->
+                                <img class="w-full h-full object-cover" 
+                                    src="images/adoptable_pets/large_dog2.jpg" 
+                                    alt="young male labrador">
+                            </div>
+                            <div class="animal_listing_container_info py-3 mx-5">
+                                <div class="flex justify-between items-center">
+                                    <div>
+                                        <p class="heading_font_1 text-xl">Pepa</p>
+                                        <p>Labrador</p>
+                                    </div>
+                                        <button class="adopt-btn" 
+                                                onclick="openForm('Pepa','Labrador')" 
+                                                aria-label="Adopt Pepa the Labrador">
+                                            Request
+                                        </button>
+                                </div>
+                                <div class="animal_listing_container_info_other">
+                                    <p>Male | Large | 1 to 2 years</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!--animals to view section-->
+                <div class="animal_listing_container_no_idea_what_for 
+                                bg-[var(--light-grey)]
+                                w-full
+                                md:basis-1/2 
+                                md:max-w-[50%] 
+                                lg:basis-1/3 
+                                lg:max-w-[33.333%] 
+                                box-border
+                                rounded-xl" 
+                    data-liked="false"
+                    data-category="bird"
+                    data-gender="female"
+                    data-size="medium"
+                    data-age="under_6_month"> <!--animal listing section-->
+
+                    <div class="animal_listing_container relative"> <!--animal container - after finishing copy and paste as many times as needed-->
+                        <button class="adoptable_pets_like_button 
+                                        absolute
+                                        top-2
+                                        right-2" type="button" aria-label="Like button"> <!--like button-->
+                            <i class="fa-solid fa-heart 
+                                    bg-[var(--off-white)]
+                                    p-2
+                                    m-0.5
+                                    rounded-3xl
+                                    text-l"></i>
+                        </button>
+                        <div class="animal_listing_container_body"> <!--main body of the container-->
+                            <div class="animal_listing_container_image 
+                                        aspect-[4/3] 
+                                        w-full 
+                                        overflow-hidden
+                                        rounded-t-xl"> <!--this is the picture of the animal-->
+                                <img class="w-full h-full object-cover"
+                                src="images/adoptable_pets/meduim_bird1.jpg" 
+                                alt="">
+                            </div>
+                            <div class="animal_listing_container_info py-3 mx-5">
+                                <div class="flex justify-between items-center">
+                                    <div>
+                                        <p class="heading_font_1 text-xl">Pudding</p>
+                                        <p>African Grey Parrot</p>
+                                    </div>
+                                        <button class="adopt-btn" 
+                                                onclick="openForm('Pudding','African Grey Parrot')" 
+                                                aria-label="Adopt Pudding the African Grey Parrot">
+                                            Request
+                                        </button>
+                                </div>
+                                <div class="animal_listing_container_info_other">
+                                    <p>Female | Medium | Under 6 months</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!--animals to view section-->
+                <div class="animal_listing_container_no_idea_what_for 
+                                bg-[var(--light-grey)]
+                                w-full
+                                md:basis-1/2 
+                                md:max-w-[50%] 
+                                lg:basis-1/3 
+                                lg:max-w-[33.333%] 
+                                box-border
+                                rounded-xl" 
+                    data-liked="false"
+                    data-category="exotic"
+                    data-gender="female"
+                    data-size="small"
+                    data-age="1_to_2_years"> <!--animal listing section-->
+
+                    <div class="animal_listing_container relative"> <!--animal container - after finishing copy and paste as many times as needed-->
+                        <button class="adoptable_pets_like_button 
+                                        absolute
+                                        top-2
+                                        right-2" type="button" aria-label="Like button"> <!--like button-->
+                            <i class="fa-solid fa-heart 
+                                    bg-[var(--off-white)]
+                                    p-2
+                                    m-0.5
+                                    rounded-3xl
+                                    text-l"></i>
+                        </button>
+                        <div class="animal_listing_container_body"> <!--main body of the container-->
+                            <div class="animal_listing_container_image 
+                                        aspect-[4/3] 
+                                        w-full 
+                                        overflow-hidden
+                                        rounded-t-xl"> <!--this is the picture of the animal-->
+                                <img class="w-full h-full object-cover"
+                                src="images/adoptable_pets/small_exotic1.jpg" 
+                                alt="Small female red eye tree frog">
+                            </div>
+                            <div class="animal_listing_container_info py-3 mx-5">
+                                <div class="flex justify-between items-center">
+                                    <div>
+                                        <p class="heading_font_1 text-xl">Nefertiti</p>
+                                        <p>Red Eye Tree Frog</p>
+                                    </div>
+                                        <button class="adopt-btn" 
+                                                onclick="openForm('Nefertiti','Red Eye Tree Frog')" 
+                                                aria-label="Adopt Nefertiti the Red Eye Tree Frog">
+                                            Request
+                                        </button>
+                                </div>
+                                <div class="animal_listing_container_info_other">
+                                    <p>Female | Small | 1 to 2 years</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!--animals to view section-->
+                <div class="animal_listing_container_no_idea_what_for 
+                                bg-[var(--light-grey)]
+                                w-full
+                                md:basis-1/2 
+                                md:max-w-[50%] 
+                                lg:basis-1/3 
+                                lg:max-w-[33.333%] 
+                                box-border
+                                rounded-xl" 
+                    data-liked="false"
+                    data-category="dog"
+                    data-gender="male"
+                    data-size="medium"
+                    data-age="8+_years"> <!--animal listing section-->
+
+                    <div class="animal_listing_container relative"> <!--animal container - after finishing copy and paste as many times as needed-->
+                        <button class="adoptable_pets_like_button 
+                                        absolute
+                                        top-2
+                                        right-2" type="button" aria-label="Like button"> <!--like button-->
+                            <i class="fa-solid fa-heart 
+                                    bg-[var(--off-white)]
+                                    p-2
+                                    m-0.5
+                                    rounded-3xl
+                                    text-l"></i>
+                        </button>
+                        <div class="animal_listing_container_body"> <!--main body of the container-->
+                            <div class="animal_listing_container_image 
+                                        aspect-[4/3] 
+                                        w-full 
+                                        overflow-hidden
+                                        rounded-t-xl"> <!--this is the picture of the animal-->
+                                <img class="w-full h-full object-cover"
+                                src="images/adoptable_pets/medium_dog1.jpeg" 
+                                alt="mature basset Hound">
+                            </div>
+                            <div class="animal_listing_container_info py-3 mx-5">
+                                <div class="flex justify-between items-center">
+                                    <div>
+                                        <p class="heading_font_1 text-xl">Charlie</p>
+                                        <p>Basset Hound</p>
+                                    </div>
+                                        <button class="adopt-btn" 
+                                                onclick="openForm('Charlie','Basset Hound')" 
+                                                aria-label="Adopt Charlie the Basset Hound">
+                                            Request
+                                        </button>
+                                </div>
+                                <div class="animal_listing_container_info_other">
+                                    <p>Male | Medium | 8+ years</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!--animals to view section-->
+                <div class="animal_listing_container_no_idea_what_for 
+                                bg-[var(--light-grey)]
+                                w-full
+                                md:basis-1/2 
+                                md:max-w-[50%] 
+                                lg:basis-1/3 
+                                lg:max-w-[33.333%] 
+                                box-border
+                                rounded-xl" 
+                    data-liked="false"
+                    data-category="farm"
+                    data-gender="female"
+                    data-size="medium"
+                    data-age="under_6_month"> <!--animal listing section-->
+
+                    <div class="animal_listing_container relative"> <!--animal container - after finishing copy and paste as many times as needed-->
+                        <button class="adoptable_pets_like_button 
+                                        absolute
+                                        top-2
+                                        right-2" type="button" aria-label="Like button"> <!--like button-->
+                            <i class="fa-solid fa-heart 
+                                    bg-[var(--off-white)]
+                                    p-2
+                                    m-0.5
+                                    rounded-3xl
+                                    text-l"></i>
+                        </button>
+                        <div class="animal_listing_container_body"> <!--main body of the container-->
+                            <div class="animal_listing_container_image 
+                                        aspect-[4/3] 
+                                        w-full 
+                                        overflow-hidden
+                                        rounded-t-xl"> <!--this is the picture of the animal-->
+                                <img class="w-full h-full object-cover"
+                                src="images/adoptable_pets/medium_farm1.jpg" 
+                                alt="">
+                            </div>
+                            <div class="animal_listing_container_info py-3 mx-5">
+                                <div class="flex justify-between items-center">
+                                    <div>
+                                        <p class="heading_font_1 text-xl">Rock</p>
+                                        <p>Sheep</p>
+                                    </div>
+                                        <button class="adopt-btn" 
+                                                onclick="openForm('Rock','Sheep')" 
+                                                aria-label="Adopt Rock the Sheep">
+                                            Request
+                                        </button>
+                                </div>
+                                <div class="animal_listing_container_info_other">
+                                    <p>Female | Medium | Under 6 months</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!--animals to view section-->
+                <div class="animal_listing_container_no_idea_what_for 
+                                bg-[var(--light-grey)]
+                                w-full
+                                md:basis-1/2 
+                                md:max-w-[50%] 
+                                lg:basis-1/3 
+                                lg:max-w-[33.333%] 
+                                box-border
+                                rounded-xl" 
+                    data-liked="false"
+                    data-category="farm"
+                    data-gender="male"
+                    data-size="large"
+                    data-age="3_to_5_years"> <!--animal listing section-->
+
+                    <div class="animal_listing_container relative"> <!--animal container - after finishing copy and paste as many times as needed-->
+                        <button class="adoptable_pets_like_button 
+                                        absolute
+                                        top-2
+                                        right-2" type="button" aria-label="Like button"> <!--like button-->
+                            <i class="fa-solid fa-heart 
+                                    bg-[var(--off-white)]
+                                    p-2
+                                    m-0.5
+                                    rounded-3xl
+                                    text-l"></i>
+                        </button>
+                        <div class="animal_listing_container_body"> <!--main body of the container-->
+                            <div class="animal_listing_container_image 
+                                        aspect-[4/3] 
+                                        w-full 
+                                        overflow-hidden
+                                        rounded-t-xl"> <!--this is the picture of the animal-->
+                                <img class="w-full h-full object-cover"
+                                    src="images/adoptable_pets/large_farm1.jpg"
+                                    alt="Male light llama">
+                            </div>
+                            <div class="animal_listing_container_info py-3 mx-5">
+                                <div class="flex justify-between items-center">
+                                    <div>
+                                        <p class="heading_font_1 text-xl">Rudebago</p>
+                                        <p>Domestic Llama</p>
+                                    </div>
+                                        <button class="adopt-btn" 
+                                                onclick="openForm('Rudebago','Domestic Llama')" 
+                                                aria-label="Adopt Rudebago the Domestic Llama">
+                                            Request
+                                        </button>
+                                </div>
+                                <div class="animal_listing_container_info_other">
+                                    <p>Male | Large | 3 to 5 years</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+   <!-- Footer -->
+    <footer>
+      <div class="container">
+        <div class="footer-blahblah">
+          <div class="col footer-lefty">
+            <img src="images/log_yellow.png" alt="logo" class="img-fluid" />
+          </div>
+          <div class="footer-col footer-lefty">
+            <h3 class="footer-head">Animal Shelter</h3>
+            <p class="footer-cappy">
+              Dedicated to rescuing, rehabilitating, and rehoming animals in
+              need. Every adoption changes two lives - the pet's and yours.
+            </p>
+          </div>
+
+          <div class="footer-col footer-middley">
+            <h4 class="footer-titley">Discover</h4>
+            <a href="index.html" class="footer-link">Home</a>
+            <a href="newsletter.html" class="footer-link">Newsletter</a>
+            <a href="adoptable_pets.html" class="footer-link">Adoptable Pets</a>
+            <a href="eventcalendar.html" class="footer-link">Event Calendar</a>
+            <a href="volunteer.html" class="footer-link">Volunteer</a>
+            <a href="faq.html" class="footer-link">FAQ</a>
+          </div>
+
+          <div class="footer-col footer-righty">
+            <h4 class="footer-titley">Address</h4>
+            <p class="footer-addressy">
+              <i class="fa-solid fa-location-dot"></i>73 Glasnevin
+            </p>
+            <p class="footer-addressy" style="margin-left: 23px">
+              DCU Glasnevin
+            </p>
+            <p class="footer-addressy" style="margin-left: 23px">Ireland</p>
+            <p class="footer-addressy">
+              <i class="fa-solid fa-location-arrow"></i>info@animalshelter.ie
+            </p>
+            <p class="footer-addressy">
+              <i class="fa-solid fa-phone" style="margin-left: 2px"></i>0 123
+              456 789
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+
+
+    <!--Adoption Form-->
+    <div id="adopt-form" class="hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+        <div class="adoption-form 
+                    relative 
+                    max-w-sm 
+                    w-full 
+                    p-6">
+            <button onclick="closeForm()" 
+                    class="absolute 
+                            top-3 
+                            right-4 
+                            text-xl 
+                            font-bold 
+                            text-[var(--dark-red)]">&times;</button>
+
+            <h2 class="text-xl font-bold mb-4 text-center text-[var(--dark-red)]"> Request a Pet</h2>
+            <form onsubmit="submitForm(event)">
+            <div class="form-group">
+                <input type="text" id="petName" readonly placeholder="Pet Name" />
+            </div>
+            <div class="form-group">
+                <input type="text" id="petBreed" readonly placeholder="Pet Breed" />
+            </div>
+            <div class="form-group">
+                <input type="text" id="yourName" required placeholder="Your Name" />
+            </div>
+            <div class="form-group">
+                <input type="tel" id="phone" required placeholder="Phone Number" />
+            </div>
+            <div class="form-group">
+                <input type="email" id="email" required placeholder="Email" />
+            </div>
+            <button type="submit" class="submit-btn">
+                <i class="fa-solid fa-paw"></i> Submit
+            </button>
+            </form>
+        </div>
+    </div>
+
+
+
+    <script>
+    // FILTER FEATURE START 
+        const filters = {
+            category: 'all',
+            gender: 'all',
+            size: 'all',
+            age: 'all'
+        };
+
+        function setFilter(type, value) {
+            filters[type] = value;
+            highlightActiveButtons(type, value);
+            applyFilters();
+        }
+
+        function applyFilters() {
+            const animals = document.querySelectorAll('.animal_listing_container_no_idea_what_for');
+
+            animals.forEach(animal => {
+                if (viewMode === 'favourites') {
+                    // show only liked animals, ignore filters
+                    if (animal.dataset.liked === 'true') {
+                        animal.style.display = '';
+                    } else {
+                        animal.style.display = 'none';
+                    }
+                } else {
+                    // normal filter logic
+                    const animalCategory = animal.getAttribute('data-category');
+                    const animalGender   = animal.getAttribute('data-gender');
+                    const animalSize     = animal.getAttribute('data-size');
+                    const animalAge      = animal.getAttribute('data-age');
+
+                    const matchCategory = (filters.category === 'all' || filters.category === animalCategory);
+                    const matchGender   = (filters.gender   === 'all' || filters.gender   === animalGender);
+                    const matchSize     = (filters.size     === 'all' || filters.size     === animalSize);
+                    const matchAge      = (filters.age      === 'all' || filters.age      === animalAge);
+
+                    if (matchCategory && matchGender && matchSize && matchAge) {
+                        animal.style.display = '';
+                    } else {
+                        animal.style.display = 'none';
+                    }
+                }
+            });
+
+            updateAnimalCount();
+        }
+        // FILTER FEATURE END
+
+        // HIGHLIGHTED BUTTON FEATURE START 
+        function highlightActiveButtons(type, value) {
+            const buttons = document.querySelectorAll(`button[data-filter="${type}"]`);
+
+            buttons.forEach(btn => {
+                if (btn.getAttribute("data-value") === value) {
+                    btn.classList.add("active-filter");
+                } else {
+                    btn.classList.remove("active-filter");
+                }
+            });
+        }
+        // HIGHLIGHTED BUTTON FEATURE END 
+
+        // DROPDOWN FILTER FEATURE START
+        document.addEventListener('DOMContentLoaded', () => {
+            const filterBtn = document.getElementById('adoptable_pets_filter_button');
+            const filterMenu = document.querySelector('.adoptable_pets_filter');
+
+            filterBtn.addEventListener('click', () => {
+                filterMenu.classList.toggle('show');
+            });
+
+            // clicking outside closes the dropdown
+            document.addEventListener('click', (e) => {
+                if (!filterBtn.contains(e.target) && !filterMenu.contains(e.target)) {
+                    filterMenu.classList.remove('show');
+                }
+            });
+        });
+        // DROPDOWN FILTER FEATURE END
+
+        // LIKE BUTTON START
+        document.querySelectorAll('.adoptable_pets_like_button').forEach(button => {
+            button.addEventListener('click', () => {
+                const icon = button.querySelector('i');
+                const card = button.closest('.animal_listing_container_no_idea_what_for');
+
+                const liked = card.dataset.liked === 'true';
+
+                if (liked) {
+                    // unlike
+                    icon.classList.remove('text-red-500');
+                    icon.classList.add('text-[var(--off-black)]');
+                    card.dataset.liked = 'false';
+                } else {
+                    // like
+                    icon.classList.remove('text-[var(--off-black)]');
+                    icon.classList.add('text-red-500');
+                    card.dataset.liked = 'true';
+                }
+            });
+        });
+
+        let viewMode = 'all'; // 'all' | 'favourites'
+
+        function setViewMode(mode) {
+            viewMode = mode;
+
+            if (mode === 'all') {
+                // reset all filters when switching back to "all pets"
+                filters.category = 'all';
+                filters.gender   = 'all';
+                filters.size     = 'all';
+                filters.age      = 'all';
+
+                // clear active filter button highlights
+                document.querySelectorAll('.active-filter').forEach(btn => {
+                    btn.classList.remove('active-filter');
+                });
+            }
+
+            applyFilters();
+        }
+        // LIKE BUTTON END 
+
+        // ANIMALS FOR ADOPTION COUNT START
+        function updateAnimalCount() {
+            const animals = document.querySelectorAll('.animal_listing_container_no_idea_what_for');
+            let count = 0;
+
+            animals.forEach(animal => {
+                if (animal.style.display !== 'none') {
+                    count++;
+                }
+            });
+
+            document.getElementById('animalCount').textContent = count;
+        }
+        // ANIMALS FOR ADOPTION COUNT END
+
+        // LOAD AT THE START START
+        document.addEventListener('DOMContentLoaded', () => {
+            applyFilters();
+            updateAnimalCount();
+        });
+        // LOAD AT THE START END
+
+        // ADOPT POP UP 
+        function openForm(name, breed) {
+            document.getElementById('petName').value = name;
+            document.getElementById('petBreed').value = breed;
+            document.getElementById('adopt-form').classList.remove('hidden');
+        }
+
+        function closeForm() {
+            document.getElementById('adopt-form').classList.add('hidden');
+        }
+
+        function submitForm(event) {
+            event.preventDefault();
+            const userName = document.getElementById('yourName').value;
+            const petName = document.getElementById('petName').value;
+            const petBreed = document.getElementById('petBreed').value;
+
+            alert(`Dear ${userName}, thank you for your interest in ${petName}, ${petBreed}.
+            We will be in touch soon with more information.
+            Thank you, Dublin Paws`);
+
+            closeForm();
+        }
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="animal.js"></script>
+    </body>
+</html>
