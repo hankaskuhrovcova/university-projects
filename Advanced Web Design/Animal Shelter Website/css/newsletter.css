@@ -1,0 +1,107 @@
+body {
+  font-family: "Poppins", sans-serif;
+  color: #333;
+  line-height: 1.6;
+  overflow-x: hidden;
+  background: #f7f6f6;
+  min-height: 100vh;
+}
+
+/* Newsletter Section */
+#newsletter {
+  background: white;
+  padding: 3rem;
+  border-radius: 20px;
+  box-shadow: 0 10px 40px rgba(110, 13, 0, 0.2);
+  margin: 2rem auto;
+  animation: fadeInUp 0.6s ease;
+}
+
+#newsletter h2 {
+  font-family: "Montserrat", sans-serif;
+  color: #6e0d00;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+#newsletter .form-label {
+  font-weight: 600;
+  color: #6e0d00;
+  margin-bottom: 0.5rem;
+}
+
+#newsletter .form-control {
+  padding: 0.75rem 1rem;
+  border: 2px solid #d3d3d3;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  font-size: 1rem;
+}
+
+#newsletter .form-control:focus {
+  border-color: #ffc800;
+  box-shadow: 0 0 0 0.2rem rgba(255, 200, 0, 0.25);
+}
+
+.BUTTON {
+  background: #6e0d00;
+  color: white;
+  border: none;
+  padding: 0.75rem 2.5rem;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 100%;
+  margin-top: 1rem;
+}
+
+.BUTTON:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(110, 13, 0, 0.4);
+  background: #6e0d00;
+}
+
+.successMessage {
+  background: #ffc800;
+  color: #0e0d0d;
+  border: none;
+  border-radius: 10px;
+  padding: 1rem;
+  text-align: center;
+  font-weight: 600;
+  animation: slideIn 0.5s ease;
+}
+
+.feature-item {
+  display: inline-block;
+  margin: 1rem;
+  padding: 1.5rem;
+  background: #f7f6f6;
+  border-radius: 15px;
+  transition: all 0.3s ease;
+}
+
+.feature-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(110, 13, 0, 0.2);
+}
+
+.feature-item i {
+  font-size: 2.5rem;
+  color: #ffc800;
+  margin-bottom: 1rem;
+}
+
+.feature-item h4 {
+  font-family: "Montserrat", sans-serif;
+  color: #0e0d0d;
+  margin-bottom: 0.5rem;
+}
+
+.feature-item p {
+  color: #0e0d0d;
+  font-size: 0.9rem;
+}
