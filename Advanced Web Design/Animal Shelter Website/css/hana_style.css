@@ -1,0 +1,209 @@
+@import url("../main.css");
+
+/* ADOPTABLE PETS PAGE */
+.animal_listing_container_no_idea_what_for {
+    box-shadow: 0 0 9px 0 rgba(0, 0, 0, .25);
+}
+
+.animal_listing_container_no_idea_what_for {
+  max-width: 100% !important;
+  flex: none !important;
+}
+
+/* FILTER FEATURE */
+.adoptable_pets_filter_feature {
+    width: 100%;
+    justify-content: center;
+}
+
+.adoptable_pets_filter_buttons button {
+    padding: 1px 10px;
+    margin: 3px 10px;
+    background-color: var(--dark-red);
+    color: var(--off-white);
+    border-color: var(--off-white);
+    cursor: pointer;
+    border-radius: 16px;
+    transition: 0.2s;
+}
+
+.adoptable_pets_filter_buttons button:hover {
+    background-color: var(--yellow);
+    color: var(--off-black);
+    transform: scale(1.05);
+}
+
+.active-filter {
+    background-color: var(--yellow) !important;
+    color: var(--off-black) !important;
+}
+/* FILTER FEATURE END */
+
+/* FILTER DROP DOWN START */
+.adoptable_pets_filter_size {
+    width: 100%;
+}
+
+.adoptable_pets_filter_to_show {
+    background-color: var(--dark-red);
+    border-radius: 30px;
+}
+
+#adoptable_pets_filter_button.filter-open {
+    border-radius: 16px 16px 0 0; /* only top corners */
+}
+
+#adoptable_pets_filter_button {
+    display: block;
+    border: none;
+    padding: 12px 20px;
+    background-color: var(--dark-red);
+    color: var(--off-white);
+    font-weight: bolder;
+    cursor: pointer;
+    font-size: 1.1rem;
+    width: 100%;                /* full width like the filter box */ 
+    box-sizing: border-box;
+    border-radius: 30px;        /* fully rounded when closed */
+    text-align: center;
+    transition: border-radius 0.2s ease;
+}
+
+.adoptable_pets_dropdown {
+    position: relative;
+    width: 80%;                 /* adjust to match filter box */ 
+    margin: 0 auto;
+}
+
+/* Dropdown styling */
+.adoptable_pets_filter {
+    display: none;
+    position: absolute;
+    top: 100%;
+    width: 100%;                /* same width as parent */ 
+    background: var(--dark-red);
+    padding: 15px;
+    z-index: 100;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+    margin-top: 0;
+    text-align: center;
+}
+
+/* Show dropdown when checkbox is checked */
+#filter-toggle:checked ~ .adoptable_pets_filter {
+    display: block;
+}
+
+/* When open: only top corners rounded */
+#filter-toggle:checked + #adoptable_pets_filter_button {
+    border-radius: 16px 16px 0 0;
+}
+
+/* OVERLAY START */
+.intraductory_section_adoptable_pets {
+    position: relative;
+    background: var(--yellow);
+    text-align: center;
+    padding-top: 100px;
+    padding-bottom: 2rem;
+}
+
+.overlay-full {
+    position: absolute;
+    inset: 0;             
+    width: 100%;
+    height: 100%;
+    object-fit: cover;     
+    opacity: 0.3;            
+    pointer-events: none;      
+    z-index: 1;
+    filter: grayscale(100%);
+}
+
+/* OVERLAY END */
+
+/* ADOPT BUTTON */
+.adopt-btn {
+  background-color: var(--off-black);
+  color: var(--off-white);
+  border: none;
+  padding: 6px 12px;
+  border-radius: 21px;
+  cursor: pointer;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.adopt-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(110, 13, 0, 0.3);
+  background-color: var(--yellow);
+  color: var(--off-black);
+}
+
+
+/* ADOPT FORM */
+.adoption-form {
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 8px 30px rgba(110, 13, 0, 0.15);
+}
+
+.form-group {
+  margin-bottom: 1rem;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 0.6rem 1rem;
+  border: 2px solid #d3d3d3;
+  border-radius: 10px;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+}
+
+.form-group input:focus {
+  outline: none;
+  border-color: #ffc800;
+  box-shadow: 0 0 0 0.2rem rgba(255, 200, 0, 0.25);
+}
+
+.submit-btn {
+  width: 100%;
+  padding: 0.9rem;
+  background: var(--dark-red);
+  color: white;
+  border: none;
+  border-radius: 40px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.submit-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(110, 13, 0, 0.3);
+  background-color: var(--yellow);
+  color: var(--off-black);
+}
+
+
+/* SUCCESS STORIES ADOPTION PAGE BUTTON */
+.success_adopt_btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(110, 13, 0, 0.3);
+  background-color: var(--yellow);
+  color: var(--off-black);
+}
+
+.success_story p {
+  text-align: justify;
+  font-size: 1.1rem;
+}
+
+.success_story h2 {
+  border-bottom: 3px solid var(--yellow);
+  padding-bottom: 12px;
+}
