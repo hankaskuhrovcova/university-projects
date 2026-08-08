@@ -1,0 +1,172 @@
+/* =========================================
+   LOST PETS PAGE STYLES
+========================================= */
+
+@import url("main.css");
+
+/* =========================================
+   LOST PETS PAGE STYLES
+========================================= */
+
+@import url("main.css");
+
+body {
+  background-color: var(--light-grey);
+  margin: 0;
+  padding: 0;
+}
+
+/* REMOVE GAP BELOW NAV */
+header.nav-wsp {
+  margin-bottom: 0;
+}
+
+/* =========================================
+   HERO SECTION (IMAGE + YELLOW OVERLAY)
+========================================= */
+
+.lost-hero {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;   /* vertical center */
+  align-items: center;       /* horizontal center */
+
+  min-height: 320px;         /* hero height */
+  padding: 40px 20px;
+
+  text-align: center;
+  color: var(--off-black);
+
+  /* BACKGROUND IMAGE */
+  background-image: url("../images/6.png"); /* CHANGE IF NEEDED */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* YELLOW OVERLAY */
+.lost-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(255, 204, 0, 0.78);
+  z-index: 1;
+}
+
+/* TEXT ABOVE OVERLAY + SLIGHTLY LOWER */
+.lost-hero h1,
+.lost-hero p {
+  position: relative;
+  z-index: 2;
+  transform: translateY(20px); /* pushes text down */
+}
+
+.lost-hero h1 {
+  font-size: 3.75rem;
+  margin-bottom: 20px;
+  color: var(--off-black);
+}
+
+.lost-hero p {
+  max-width: 750px;
+  margin: 0 auto;
+  font-size: 1.2rem;
+  line-height: 1.7;
+  color: var(--off-black);
+}
+
+/* =========================================
+   LOST PETS GRID
+========================================= */
+
+.lost-container {
+  max-width: 1200px;
+  margin: 60px auto;
+  padding: 0 20px;
+
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+/* =========================================
+   PET CARD
+========================================= */
+
+.lost-card {
+  background-color: var(--off-white);
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  /* transition removed since no hover is wanted */
+}
+
+.lost-card img {
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+  margin-bottom: 16px; /* ✅ SPACE BETWEEN IMAGE AND NAME */
+}
+
+.lost-info {
+  padding-left: 22px;
+  padding-right: 22px;
+  padding-bottom: 13px;
+}
+
+.lost-info h3 {
+  font-size: 1.4rem;
+  color: var(--dark-red);
+  margin-bottom: 6px;
+}
+
+.lost-info p {
+  font-size: 1rem;
+  margin-bottom: 6px;
+  color: var(--off-black);
+}
+
+/* =========================================
+   BUTTON
+========================================= */
+
+.lost-btn {
+  display: inline-block;
+  margin-top: 7px;
+  padding: 8px 18px;
+  background-color: var(--dark-red);
+  color: var(--off-white);
+  border-radius: 30px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.lost-btn:hover {
+  background-color: var(--yellow);
+  color: var(--off-black);
+}
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 768px) {
+  .lost-hero {
+    min-height: 260px;
+  }
+
+  .lost-hero h1 {
+    font-size: 34px;
+  }
+
+  .lost-card img {
+    height: 200px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .lost-hero {
+    min-height: 380px;
+  }
+}
